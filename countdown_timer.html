@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COUNTDOWN TIMER</title>
+	<meta charset="UTF-8">
+	<link rel="icon" href="countdonwn_timer.ico">
+	<meta thhp-equiv="X-UA-Compatible" content="IE=edge ,chrome=1">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-9p/EzXeJ6jvMchMlLQ4Xwc5PQb4cBw/izF7+Z+P7wqLdN8k3jHpy3u5Rd8+Ry0AjlJ5YzXwWQo7Q+8ZL7RcG8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css">
+</head>
+<body>
+	
+	<div title="muted" id="mute-icon" onclick="toggleMute()">
+		<i class="fa fa-volume-up"></i>
+		
+	  </div>
+	  
+	  <center>
+	<h1 title="COUNTDOWN TIMER">COUNTDOWN TIMER</h1>
+
+ <form name="form1" >
+	<div id="myDiv">
+	<input type="number" id="hours"  title="add hours" placeholder="hr" min="0"  >
+	
+	<input type="number" id="minutes" title="add minutes" placeholder="min" min="0" max="59" >
+	
+	<input type="number" id="seconds" title="add seconds" placeholder="sec" min="0" max="59" required>
+</div>
+	<div id="container">
+		<div id="centered-content">
+		  <canvas id="canvas" width="250" height="250"></canvas>
+		  <div title="TIMER" id="countdown">00:00:00</div>
+		</div>
+	  </div>
+	  
+	  
+	
+	<button type="button" title="start countdown" class="start" id="start" onclick="checkInput();">START</button>
+	<button id="stop" title="stop countdown" onclick="stopCountdown(),audio.play();">STOP</button>
+	<button type="reset" title="reset countdown" class="reset" id="reset"onclick="resetCountdown();" >RESET</button>
+</form>
+</center>
+	<audio id="countdown-finished">
+		<source src="countdown-finished.mp3" type="audio/mpeg">
+	</audio>
+
+	<br><br>
+
+	<time title=" time now" id="datetime"></time>
+	<br><br>
+	<center>
+  
+		<div style="background-color: black; animation-delay: 0ms;" >
+			<br>
+		<h1 style="color: cornsilk; font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">This WebSite Was Designed By : Ahmed ELsaman</h1>
+		
+		<h2 style="color: cornsilk;margin-top: -40; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">You Can Contact Me In : </h2><br>
+		
+	  
+	</div>
+	
+	  
+	
+	</center>
+	<div class="social">
+		<div class="text2">
+			<div class="text3" title="my facebook"> 
+				<a href="https://www.facebook.com/ahmed.elsaman.5099?mibextid=ZbWKwL"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+			</div>
+			<span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Facebook</span>
+		</div> 
+	  
+		<div class="text2">
+			<div class="text3"  title="my youtube"> 
+				<a href="https://www.youtube.com/channel/UC1_6896L0ur6KUGWcE_ucDQ" target="_blank"><i class="fab fa-youtube"></i></a>
+			</div>
+			<span  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">YouTube</span>
+		</div>
+	  
+		<div class="text2">
+			<div class="text3" title="my instagram"> 
+				<a href="https://instagram.com/a7med_3lsaman?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+			</div>
+			<span  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Instagram</span>
+		</div>
+	  
+		<div class="text2">
+			<div class="text3"  title="my WhatsApp"> 
+				<a href="https://wa.me/qr/PQKNYIJANYQKJ1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+			</div>
+			<span style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">WhatsApp</span>
+		</div>
+		
+	  </div>
+	  
+	  </div>
+	  <footer style="background-color: black; margin-top: -30px; margin-bottom: -30px;">
+		<br><br>
+		<p title="Copy Rights" style="font-size: 10px; color: cornsilk; margin-top: -5px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">&copy; 2023 Ahmed EL-Saman. All Rights Reserved.</p>
+		<br>
+	  </footer>
+	<script src="script.js"></script>
+	
+</body>
+</html>
